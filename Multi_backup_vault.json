@@ -1,0 +1,568 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+
+  },
+  "variables": {
+    "VaultArray": [
+      {
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "ResourceGroupName": "Ignitebackup1",
+        "Location": "northcentralus",
+        "BackupVaultName": "North-BackupVault01",
+        "glaccount": "604"
+      },
+      {
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "ResourceGroupName": "Ignitebackup1",
+        "Location": "northcentralus",
+        "BackupVaultName": "North-BackupVault02",
+        "glaccount": "604"
+      },
+      {
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "ResourceGroupName": "Ignitebackup1",
+        "Location": "northcentralus",
+        "BackupVaultName": "North-BackupVault03",
+        "glaccount": "604"
+      },
+      {
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "ResourceGroupName": "Ignitebackup1",
+        "Location": "northcentralus",
+        "BackupVaultName": "North-BackupVault04",
+        "glaccount": "604"
+      },
+      {
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "ResourceGroupName": "Ignitebackup2",
+        "Location": "eastus",
+        "BackupVaultName": "East-BackupVault01",
+        "glaccount": "612"
+
+      },
+      {
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "ResourceGroupName": "Ignitebackup2",
+        "Location": "eastus",
+        "BackupVaultName": "East-BackupVault02",
+        "glaccount": "612"
+      },
+      {
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "ResourceGroupName": "Ignitebackup2",
+        "Location": "eastus",
+        "BackupVaultName": "East-BackupVault03",
+        "glaccount": "612"
+      },
+      {
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "ResourceGroupName": "Ignitebackup2",
+        "Location": "eastus",
+        "BackupVaultName": "East-BackupVault04",
+        "glaccount": "612"
+      },
+      {
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "ResourceGroupName": "Ignitebackup3",
+        "Location": "eastus2",
+        "BackupVaultName": "East2-BackupVault01",
+        "glaccount": "593"
+      },
+      {
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "ResourceGroupName": "Ignitebackup3",
+        "Location": "eastus2",
+        "BackupVaultName": "East2-BackupVault02",
+        "glaccount": "593"
+      },
+      {
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "ResourceGroupName": "Ignitebackup3",
+        "Location": "eastus2",
+        "BackupVaultName": "East2-BackupVault03",
+        "glaccount": "593"
+      },
+      {
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "ResourceGroupName": "Ignitebackup3",
+        "Location": "eastus2",
+        "BackupVaultName": "East2-BackupVault04",
+        "glaccount": "593"
+      },
+      {
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "ResourceGroupName": "Ignitebackup4",
+        "Location": "westus",
+        "BackupVaultName": "West-BackupVault01",
+        "glaccount": "413"
+
+      },
+      {
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "ResourceGroupName": "Ignitebackup4",
+        "Location": "westus",
+        "BackupVaultName": "West-BackupVault02",
+        "glaccount": "413"
+      },
+      {
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "ResourceGroupName": "Ignitebackup4",
+        "Location": "westus",
+        "BackupVaultName": "West-BackupVault03",
+        "glaccount": "413"
+      },
+      {
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "ResourceGroupName": "Ignitebackup4",
+        "Location": "westus",
+        "BackupVaultName": "West-BackupVault04",
+        "glaccount": "413"
+      },
+      {
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "ResourceGroupName": "Ignitebackup5",
+        "Location": "SouthCentralUs",
+        "BackupVaultName": "South-BackupVault01",
+        "glaccount": "413"
+      },
+      {
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "ResourceGroupName": "Ignitebackup5",
+        "Location": "SouthCentralUs",
+        "BackupVaultName": "South-BackupVault02",
+        "glaccount": "413"
+      },
+      {
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "ResourceGroupName": "Ignitebackup5",
+        "Location": "SouthCentralUs",
+        "BackupVaultName": "South-BackupVault03",
+        "glaccount": "413"
+      },
+      {
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "ResourceGroupName": "Ignitebackup5",
+        "Location": "SouthCentralUs",
+        "BackupVaultName": "South-BackupVault04",
+        "glaccount": "413"
+      }
+
+    ],
+    "StorageArray": [
+      {
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "ResourceGroupName": "Ignitebackup1",
+        "Location": "northcentralus",
+        "Storage_Name": "[concat('north',uniqueString(resourceGroup().id))]",
+        "Storage_kind": "StorageV2",
+        "Storage_accountType": "Standard_LRS",
+        "Storage_accessTier": "Cool"
+      },
+      {
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "ResourceGroupName": "Ignitebackup2",
+        "Location": "eastus",
+        "Storage_Name": "[concat('east',uniqueString(resourceGroup().id))]",
+        "Storage_kind": "StorageV2",
+        "Storage_accountType": "Standard_LRS",
+        "Storage_accessTier": "Cool"
+      },
+      {
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "ResourceGroupName": "Ignitebackup3",
+        "Location": "eastus2",
+        "Storage_Name": "[concat('east2',uniqueString(resourceGroup().id))]",
+        "Storage_kind": "StorageV2",
+        "Storage_accountType": "Standard_LRS",
+        "Storage_accessTier": "Cool"
+      },
+      {
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "ResourceGroupName": "Ignitebackup4",
+        "Location": "westus",
+        "Storage_Name": "[concat('west',uniqueString(resourceGroup().id))]",
+        "Storage_kind": "StorageV2",
+        "Storage_accountType": "Standard_LRS",
+        "Storage_accessTier": "Cool"
+      },
+      {
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "ResourceGroupName": "Ignitebackup5",
+        "Location": "SouthCentralUS",
+        "Storage_Name": "[concat('south',uniqueString(resourceGroup().id))]",
+        "Storage_kind": "StorageV2",
+        "Storage_accountType": "Standard_LRS",
+        "Storage_accessTier": "Cool"
+      }
+    ]    
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Resources/deployments",
+      "name": "[concat('vault', copyIndex())]",
+      "apiVersion": "2018-05-01",
+      "subscriptionId": "[variables('VaultArray')[copyIndex()].SubscriptionID]",
+      "resourceGroup": "[variables('VaultArray')[copyIndex()].ResourceGroupName]",
+      "copy": {
+        "name": "Vault-Copy",
+        "count": "[length(variables('VaultArray'))]"
+      },
+      "properties": {
+        "mode": "Incremental",
+        "template": {
+          "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+          "contentVersion": "1.0.0.0",
+          "resources": [
+            {
+              "name": "[variables('VaultArray')[copyIndex()].BackupVaultName]",
+              "type": "Microsoft.RecoveryServices/vaults",
+              "apiVersion": "2016-06-01",
+              "location": "[variables('VaultArray')[copyIndex()].Location]",
+              "tags": {
+                "C3": "[concat('{\"organization\":',variables('VaultArray')[copyIndex()].ResourceGroupName,'\"username\":\"admin1x7\",\"email\":\"backupadmin@Contoso.com\", \"application\":\"Backup\",\"glaccount\":\"',variables('vaultarray')[copyIndex()].glaccount,'\"}')]"
+
+              },
+              "sku": {
+                "name": "RS0",
+                "tier": "Standard"
+              },
+              "properties": {
+
+              },
+              "dependsOn": [
+
+              ]
+            },
+            {
+              "type": "Microsoft.RecoveryServices/vaults/backupPolicies",
+              "name": "[concat(variables('VaultArray')[copyIndex()].BackupVaultName, '/ProdBasic')]",
+              "apiVersion": "2016-06-01",
+              "location": "[resourceGroup().location]",
+              "properties": {
+                "backupManagementType": "AzureIaasVM",
+                "schedulePolicy": {
+                  "scheduleRunFrequency": "Daily",
+                  "scheduleRunTimes": [
+                    "2018-04-24T00:00:00.000Z"
+                  ],
+                  "schedulePolicyType": "SimpleSchedulePolicy"
+                },
+                "retentionPolicy": {
+                  "dailySchedule": {
+                    "retentionTimes": [
+                      "2018-04-24T00:00:00.000Z"
+                    ],
+                    "retentionDuration": {
+                      "count": 60,
+                      "durationType": "Days"
+                    }
+                  },
+                  "retentionPolicyType": "LongTermRetentionPolicy"
+                },
+                "timeZone": "Pacific Standard Time"
+              },
+              "dependsOn": [
+                "[concat('Microsoft.RecoveryServices/vaults/', variables('VaultArray')[copyIndex()].BackupVaultName)]"
+              ]
+            },
+            {
+              "type": "Microsoft.RecoveryServices/vaults/backupPolicies",
+              "name": "[concat(variables('VaultArray')[copyIndex()].BackupVaultName, '/Non-ProdBasic')]",
+              "apiVersion": "2016-06-01",
+              "location": "[resourceGroup().location]",
+              "properties": {
+                "backupManagementType": "AzureIaasVM",
+                "schedulePolicy": {
+                  "scheduleRunFrequency": "Daily",
+                  "scheduleRunTimes": [
+                    "2018-04-24T00:00:00.000Z"
+                  ],
+                  "schedulePolicyType": "SimpleSchedulePolicy"
+                },
+                "retentionPolicy": {
+                  "dailySchedule": {
+                    "retentionTimes": [
+                      "2018-04-24T00:00:00.000Z"
+                    ],
+                    "retentionDuration": {
+                      "count": 14,
+                      "durationType": "Days"
+                    }
+                  },
+                  "retentionPolicyType": "LongTermRetentionPolicy"
+                },
+                "timeZone": "Pacific Standard Time"
+              },
+              "dependsOn": [
+                "[concat('Microsoft.RecoveryServices/vaults/', variables('VaultArray')[copyIndex()].BackupVaultName)]"
+              ]
+            },
+            {
+              "type": "Microsoft.RecoveryServices/vaults/backupPolicies",
+              "name": "[concat(variables('VaultArray')[copyIndex()].BackupVaultName, '/HIPPA')]",
+              "apiVersion": "2016-06-01",
+              "location": "[resourceGroup().location]",
+              "properties": {
+                "backupManagementType": "AzureIaasVM",
+                "schedulePolicy": {
+                  "scheduleRunFrequency": "Daily",
+                  "scheduleRunTimes": [
+                    "2018-04-20T00:00:00.000Z"
+                  ],
+                  "schedulePolicyType": "SimpleSchedulePolicy"
+                },
+                "retentionPolicy": {
+                  "dailySchedule": {
+                    "retentionTimes": [
+                      "2018-04-20T00:00:00.000Z"
+                    ],
+                    "retentionDuration": {
+                      "count": 60,
+                      "durationType": "Days"
+                    }
+                  },
+                  "weeklySchedule": {
+                    "daysOfTheWeek": [
+                      "Sunday"
+                    ],
+                    "retentionTimes": [
+                      "2018-04-20T00:00:00.000Z"
+                    ],
+                    "retentionDuration": {
+                      "count": 24,
+                      "durationType": "Weeks"
+                    }
+                  },
+                  "monthlySchedule": {
+                    "retentionScheduleFormatType": "Weekly",
+                    "retentionScheduleWeekly": {
+                      "daysOfTheWeek": [
+                        "Sunday"
+                      ],
+                      "weeksOfTheMonth": [
+                        "First"
+                      ]
+                    },
+                    "retentionTimes": [
+                      "2018-04-20T00:00:00.000Z"
+                    ],
+                    "retentionDuration": {
+                      "count": 84,
+                      "durationType": "Months"
+                    }
+                  },
+                  "retentionPolicyType": "LongTermRetentionPolicy"
+                },
+                "timeZone": "Pacific Standard Time"
+              },
+              "dependsOn": [
+                "[concat('Microsoft.RecoveryServices/vaults/', variables('VaultArray')[copyIndex()].BackupVaultName)]"
+              ]
+            },
+            {
+              "type": "Microsoft.RecoveryServices/vaults/backupPolicies",
+              "name": "[concat(variables('VaultArray')[copyIndex()].BackupVaultName, '/PCI')]",
+              "apiVersion": "2016-06-01",
+              "location": "[resourceGroup().location]",
+              "properties": {
+                "backupManagementType": "AzureIaasVM",
+                "schedulePolicy": {
+                  "scheduleRunFrequency": "Daily",
+                  "scheduleRunTimes": [
+                    "2018-04-20T00:00:00.000Z"
+                  ],
+                  "schedulePolicyType": "SimpleSchedulePolicy"
+                },
+                "retentionPolicy": {
+                  "dailySchedule": {
+                    "retentionTimes": [
+                      "2018-04-20T00:00:00.000Z"
+                    ],
+                    "retentionDuration": {
+                      "count": 60,
+                      "durationType": "Days"
+                    }
+                  },
+                  "weeklySchedule": {
+                    "daysOfTheWeek": [
+                      "Sunday"
+                    ],
+                    "retentionTimes": [
+                      "2018-04-20T00:00:00.000Z"
+                    ],
+                    "retentionDuration": {
+                      "count": 24,
+                      "durationType": "Weeks"
+                    }
+                  },
+                  "monthlySchedule": {
+                    "retentionScheduleFormatType": "Weekly",
+                    "retentionScheduleWeekly": {
+                      "daysOfTheWeek": [
+                        "Sunday"
+                      ],
+                      "weeksOfTheMonth": [
+                        "First"
+                      ]
+                    },
+                    "retentionTimes": [
+                      "2018-04-20T00:00:00.000Z"
+                    ],
+                    "retentionDuration": {
+                      "count": 12,
+                      "durationType": "Months"
+                    }
+                  },
+                  "retentionPolicyType": "LongTermRetentionPolicy"
+                },
+                "timeZone": "Pacific Standard Time"
+              },
+              "dependsOn": [
+                "[concat('Microsoft.RecoveryServices/vaults/', variables('VaultArray')[copyIndex()].BackupVaultName)]"
+              ]
+            },
+            {
+              "type": "Microsoft.RecoveryServices/vaults/backupPolicies",
+              "name": "[concat(variables('VaultArray')[copyIndex()].BackupVaultName, '/SOX')]",
+              "apiVersion": "2016-06-01",
+              "location": "[resourceGroup().location]",
+              "properties": {
+                "backupManagementType": "AzureIaasVM",
+                "schedulePolicy": {
+                  "scheduleRunFrequency": "Daily",
+                  "scheduleRunTimes": [
+                    "2018-04-20T00:00:00.000Z"
+                  ],
+                  "schedulePolicyType": "SimpleSchedulePolicy"
+                },
+                "retentionPolicy": {
+                  "dailySchedule": {
+                    "retentionTimes": [
+                      "2018-04-20T00:00:00.000Z"
+                    ],
+                    "retentionDuration": {
+                      "count": 60,
+                      "durationType": "Days"
+                    }
+                  },
+                  "weeklySchedule": {
+                    "daysOfTheWeek": [
+                      "Sunday"
+                    ],
+                    "retentionTimes": [
+                      "2018-04-20T00:00:00.000Z"
+                    ],
+                    "retentionDuration": {
+                      "count": 24,
+                      "durationType": "Weeks"
+                    }
+                  },
+                  "monthlySchedule": {
+                    "retentionScheduleFormatType": "Weekly",
+                    "retentionScheduleWeekly": {
+                      "daysOfTheWeek": [
+                        "Sunday"
+                      ],
+                      "weeksOfTheMonth": [
+                        "First"
+                      ]
+                    },
+                    "retentionTimes": [
+                      "2018-04-20T00:00:00.000Z"
+                    ],
+                    "retentionDuration": {
+                      "count": 84,
+                      "durationType": "Months"
+                    }
+                  },
+                  "retentionPolicyType": "LongTermRetentionPolicy"
+                },
+                "timeZone": "Pacific Standard Time"
+              },
+              "dependsOn": [
+                "[concat('Microsoft.RecoveryServices/vaults/', variables('VaultArray')[copyIndex()].BackupVaultName)]"
+              ]
+            }
+          ]
+        }
+      },
+      "dependsOn": [
+
+      ]
+    },
+    {
+      "type": "Microsoft.Resources/deployments",
+      "name": "[concat('storage', copyIndex())]",
+      "apiVersion": "2018-05-01",
+      "subscriptionId": "[variables('StorageArray')[copyIndex()].SubscriptionID]",
+      "resourceGroup": "[variables('StorageArray')[copyIndex()].ResourceGroupName]",
+      "copy": {
+        "name": "Storage-Copy",
+        "count": "[length(variables('StorageArray'))]"
+      },
+      "properties": {
+        "mode": "Incremental",
+        "template": {
+          "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+          "contentVersion": "1.0.0.0",
+          "resources": [
+            {
+              "type": "Microsoft.Storage/storageAccounts",
+              "name": "[variables('StorageArray')[copyIndex()].storage_Name]",
+              "apiVersion": "2017-10-01",
+              "location": "[variables('StorageArray')[copyIndex()].Location]",
+              "tags": {
+                "C3": "[concat('{\"organization\":',variables('VaultArray')[copyIndex()].ResourceGroupName,'\"username\":\"admin1x7\",\"email\":\"backupadmin@Contoso.com\", \"application\":\"Backup\",\"glaccount\":\"',variables('vaultarray')[copyIndex()].glaccount,'\"}')]"
+              },
+              "sku": {
+                "name": "[variables('StorageArray')[copyIndex()].Storage_accountType]"
+              },
+              "kind": "[variables('StorageArray')[copyIndex()].Storage_kind]",
+              "properties": {
+                "supportsHttpsTrafficOnly": true,
+                "accessTier": "[variables('StorageArray')[copyIndex()].Storage_accessTier]",
+                "encryption": {
+                  "services": {
+                    "blob": {
+                      "enabled": true
+                    },
+                    "file": {
+                      "enabled": true
+                    }
+                  },
+                  "keySource": "Microsoft.Storage"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "dependsOn": [
+
+      ]
+    },
+    {
+      "type": "Microsoft.OperationalInsights/workspaces",
+      "name": "[concat(uniqueString(resourceGroup().id),'ws')]",
+      "apiVersion": "2015-11-01-preview",
+      "location": "East US",
+      "copy": {
+        "name": "OMS-Copy",
+        "count": 1
+      },
+      "properties": {
+        "sku": {
+          "name": "Free"
+        }
+      },
+      "dependsOn": [
+
+      ]
+    }   
+  ],
+  "outputs": {
+
+  }
+}
