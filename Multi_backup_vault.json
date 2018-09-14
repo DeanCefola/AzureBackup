@@ -7,152 +7,152 @@
   "variables": {
     "VaultArray": [
       {
-        "SubscriptionID": "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         "ResourceGroupName": "xxRGNAMExx",
         "Location": "xxLOCATIONxx",
-        "BackupVaultName": "North-BackupVault01",
+        "BackupVaultName": "xxRecoveryVaultNamexx",
         "glaccount": "604"
       },
       {
-        "SubscriptionID": "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         "ResourceGroupName": "xxRGNAMExx",
         "Location": "xxLOCATIONxx",
-        "BackupVaultName": "North-BackupVault02",
+        "BackupVaultName": "xxRecoveryVaultNamexx",
         "glaccount": "604"
       },
       {
-        "SubscriptionID": "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         "ResourceGroupName": "xxRGNAMExx",
         "Location": "xxLOCATIONxx",
-        "BackupVaultName": "North-BackupVault03",
+        "BackupVaultName": "xxRecoveryVaultNamexx",
         "glaccount": "604"
       },
       {
-        "SubscriptionID": "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         "ResourceGroupName": "xxRGNAMExx",
         "Location": "xxLOCATIONxx",
-        "BackupVaultName": "North-BackupVault04",
+        "BackupVaultName": "xxRecoveryVaultNamexx",
         "glaccount": "604"
       },
       {
-        "SubscriptionID": "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         "ResourceGroupName": "xxRGNAMExx",
         "Location": "xxLOCATIONxx",
-        "BackupVaultName": "East-BackupVault01",
+        "BackupVaultName": "xxRecoveryVaultNamexx",
         "glaccount": "612"
 
       },
       {
-        "SubscriptionID": "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         "ResourceGroupName": "xxRGNAMExx",
         "Location": "xxLOCATIONxx",
-        "BackupVaultName": "East-BackupVault02",
+        "BackupVaultName": "xxRecoveryVaultNamexx",
         "glaccount": "612"
       },
       {
-        "SubscriptionID": "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         "ResourceGroupName": "xxRGNAMExx",
         "Location": "xxLOCATIONxx",
-        "BackupVaultName": "East-BackupVault03",
+        "BackupVaultName": "xxRecoveryVaultNamexx",
         "glaccount": "612"
       },
       {
-        "SubscriptionID": "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         "ResourceGroupName": "xxRGNAMExx",
         "Location": "xxLOCATIONxx",
-        "BackupVaultName": "East-BackupVault04",
+        "BackupVaultName": "xxRecoveryVaultNamexx",
         "glaccount": "612"
       },
       {
-        "SubscriptionID": "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         "ResourceGroupName": "xxRGNAMExx",
         "Location": "xxLOCATIONxx",
-        "BackupVaultName": "East2-BackupVault01",
+        "BackupVaultName": "xxRecoveryVaultNamexx",
         "glaccount": "593"
       },
       {
-        "SubscriptionID": "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         "ResourceGroupName": "xxRGNAMExx",
         "Location": "xxLOCATIONxx",
-        "BackupVaultName": "East2-BackupVault02",
+        "BackupVaultName": "xxRecoveryVaultNamexx",
         "glaccount": "593"
       },
       {
-        "SubscriptionID": "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         "ResourceGroupName": "xxRGNAMExx",
         "Location": "xxLOCATIONxx",
-        "BackupVaultName": "East2-BackupVault03",
+        "BackupVaultName": "xxRecoveryVaultNamexx",
         "glaccount": "593"
       },
       {
-        "SubscriptionID": "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         "ResourceGroupName": "xxRGNAMExx",
         "Location": "xxLOCATIONxx",
-        "BackupVaultName": "East2-BackupVault04",
+        "BackupVaultName": "xxRecoveryVaultNamexx",
         "glaccount": "593"
       },
       {
-        "SubscriptionID": "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         "ResourceGroupName": "xxRGNAMExx",
         "Location": "xxLOCATIONxx",
-        "BackupVaultName": "West-BackupVault01",
+        "BackupVaultName": "xxRecoveryVaultNamexx",
         "glaccount": "413"
 
       },
       {
-        "SubscriptionID": "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         "ResourceGroupName": "xxRGNAMExx",
         "Location": "xxLOCATIONxx",
-        "BackupVaultName": "West-BackupVault02",
+        "BackupVaultName": "xxRecoveryVaultNamexx",
         "glaccount": "413"
       },
       {
-        "SubscriptionID": "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         "ResourceGroupName": "xxRGNAMExx",
         "Location": "xxLOCATIONxx",
-        "BackupVaultName": "West-BackupVault03",
+        "BackupVaultName": "xxRecoveryVaultNamexx",
         "glaccount": "413"
       },
       {
-        "SubscriptionID": "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         "ResourceGroupName": "xxRGNAMExx",
         "Location": "xxLOCATIONxx",
-        "BackupVaultName": "West-BackupVault04",
+        "BackupVaultName": "xxRecoveryVaultNamexx",
         "glaccount": "413"
       },
       {
-        "SubscriptionID": "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         "ResourceGroupName": "xxRGNAMExx",
         "Location": "xxLOCATIONxx",
-        "BackupVaultName": "South-BackupVault01",
+        "BackupVaultName": "xxRecoveryVaultNamexx",
         "glaccount": "413"
       },
       {
-        "SubscriptionID": "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         "ResourceGroupName": "xxRGNAMExx",
         "Location": "xxLOCATIONxx",
-        "BackupVaultName": "South-BackupVault02",
+        "BackupVaultName": "xxRecoveryVaultNamexx",
         "glaccount": "413"
       },
       {
-        "SubscriptionID": "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         "ResourceGroupName": "xxRGNAMExx",
         "Location": "xxLOCATIONxx",
-        "BackupVaultName": "South-BackupVault03",
+        "BackupVaultName": "xxRecoveryVaultNamexx",
         "glaccount": "413"
       },
       {
-        "SubscriptionID": "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         "ResourceGroupName": "xxRGNAMExx",
         "Location": "xxLOCATIONxx",
-        "BackupVaultName": "South-BackupVault04",
+        "BackupVaultName": "xxRecoveryVaultNamexx",
         "glaccount": "413"
       }
 
     ],
     "StorageArray": [
       {
-        "SubscriptionID": "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         "ResourceGroupName": "xxRGNAMExx",
         "Location": "xxLOCATIONxx",
         "Storage_Name": "[concat('xxPREFIXxx',uniqueString(resourceGroup().id))]",
@@ -161,7 +161,7 @@
         "Storage_accessTier": "Cool"
       },
       {
-        "SubscriptionID": "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         "ResourceGroupName": "xxRGNAMExx",
         "Location": "xxLOCATIONxx",
         "Storage_Name": "[concat('xxPREFIXxx',uniqueString(resourceGroup().id))]",
@@ -170,7 +170,7 @@
         "Storage_accessTier": "Cool"
       },
       {
-        "SubscriptionID": "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         "ResourceGroupName": "xxRGNAMExx",
         "Location": "xxLOCATIONxx",
         "Storage_Name": "[concat('xxPREFIXxx',uniqueString(resourceGroup().id))]",
@@ -179,7 +179,7 @@
         "Storage_accessTier": "Cool"
       },
       {
-        "SubscriptionID": "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         "ResourceGroupName": "xxRGNAMExx",
         "Location": "xxLOCATIONxx",
         "Storage_Name": "[concat('xxPREFIXxx',uniqueString(resourceGroup().id))]",
@@ -188,7 +188,7 @@
         "Storage_accessTier": "Cool"
       },
       {
-        "SubscriptionID": "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "SubscriptionID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         "ResourceGroupName": "xxRGNAMExx",
         "Location": "xxLOCATIONxx",
         "Storage_Name": "[concat('xxPREFIXxx',uniqueString(resourceGroup().id))]",
@@ -196,7 +196,7 @@
         "Storage_accountType": "Standard_LRS",
         "Storage_accessTier": "Cool"
       }
-    ]
+    ]    
   },
   "resources": [
     {
