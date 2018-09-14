@@ -63,12 +63,12 @@ Deployment Procedure:
     ]
 
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com/DeanCefola/AzureBackup/master/Multi_backup_vault.json" target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FDeanCefola%2FAzureBackup%2Fmaster%2FMulti_backup_vault.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
-<a href="http://armviz.io/#/?load=https%3A%2F%2Fhttps://raw.githubusercontent.com/DeanCefola/AzureBackup/master/Multi_backup_vault.json" target="_blank">
+<a href="http://armviz.io/#/?load=https%3A%2F%2Fhttps://raw.githubusercontent.com%2FDeanCefola%2FAzureBackup%2Fmaster%2FMulti_backup_vault.json" target="_blank">
     <img src="http://armviz.io/visualizebutton.png"/>
 </a>
 
 
-This template allows you to deploy a simple Linux VM using a few different options for the Ubuntu Linux version, using the latest patched version. This will deploy a A1 size VM in the resource group location and return the FQDN of the VM.
+This template allows you to deploy Multiple Azure Recovery Services Vaults for Azure Backup
