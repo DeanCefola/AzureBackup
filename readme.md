@@ -66,9 +66,6 @@ Deployment Procedure:
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FDeanCefola%2FAzureBackup%2Fmaster%2FMulti_backup_vault.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
-<a href="http://armviz.io/#/?load=https%3A%2F%2Fhttps://raw.githubusercontent.com%2FDeanCefola%2FAzureBackup%2Fmaster%2FMulti_backup_vault.json" target="_blank">
-    <img src="http://armviz.io/visualizebutton.png"/>
-</a>
 
 
 This template allows you to deploy Multiple Azure Recovery Services Vaults for Azure Backup
