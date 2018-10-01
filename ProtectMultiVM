@@ -1,0 +1,148 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+
+  },
+  "variables": {
+    "ProtectArray": [
+      {
+        "SubID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "RGName": "Ignitebackup-1",
+        "VMName": "northcentralus-JumpVM",
+        "Backup_RGName": "Ignitebackup-1",
+        "VaultName": "northvault-01-4by4qtontyt5g",
+        "Policy": "PCI"
+      },  
+      {
+        "SubID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "RGName": "Ignitebackup-1",
+        "VMName": "northcentralus-WebVM",
+        "Backup_RGName": "Ignitebackup-1",
+        "VaultName": "northvault-01-4by4qtontyt5g",
+        "Policy": "PCI"
+      },
+      {
+        "SubID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "RGName": "Ignitebackup-1",
+        "VMName": "northcentralus-AppVM",
+        "Backup_RGName": "Ignitebackup-1",
+        "VaultName": "northvault-01-4by4qtontyt5g",
+        "Policy": "HIPPA"
+      },
+      {
+        "SubID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "RGName": "Ignitebackup-1",
+        "VMName": "northcentralus-DBVM",
+        "Backup_RGName": "Ignitebackup-1",
+        "VaultName": "northvault-01-4by4qtontyt5g",
+        "Policy": "SOX"
+      },
+
+      {
+        "SubID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "RGName": "Ignitebackup-3",
+        "VMName": "centralus-JumpVM",
+        "Backup_RGName": "Ignitebackup-3",
+        "VaultName": "centralvault-01-4by4qtontyt5g",
+        "Policy": "PCI"
+      },
+      {
+        "SubID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "RGName": "Ignitebackup-3",
+        "VMName": "centralus-WebVM",
+        "Backup_RGName": "Ignitebackup-3",
+        "VaultName": "centralvault-01-4by4qtontyt5g",
+        "Policy": "ProdBasic"
+      },
+      {
+        "SubID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "RGName": "Ignitebackup-3",
+        "VMName": "centralus-AppVM",
+        "Backup_RGName": "Ignitebackup-3",
+        "VaultName": "centralvault-01-4by4qtontyt5g",
+        "Policy": "HIPPA"
+      },
+      {
+        "SubID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "RGName": "Ignitebackup-3",
+        "VMName": "centralus-DBVM",
+        "Backup_RGName": "Ignitebackup-3",
+        "VaultName": "centralvault-01-4by4qtontyt5g",
+        "Policy": "SOX"
+      },
+
+      {
+        "SubID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "RGName": "Ignitebackup-4",
+        "VMName": "eastus2-JumpVM",
+        "Backup_RGName": "Ignitebackup-4",
+        "VaultName": "east2vault-01-4by4qtontyt5g",
+        "Policy": "PCI"
+      },
+      {
+        "SubID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "RGName": "Ignitebackup-4",
+        "VMName": "eastus2-WebVM",
+        "Backup_RGName": "Ignitebackup-4",
+        "VaultName": "east2vault-01-4by4qtontyt5g",
+        "Policy": "ProdBasic"
+      },
+      {
+        "SubID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "RGName": "Ignitebackup-4",
+        "VMName": "eastus2-AppVM",
+        "Backup_RGName": "Ignitebackup-4",
+        "VaultName": "east2vault-01-4by4qtontyt5g",
+        "Policy": "HIPPA"
+      },
+      {
+        "SubID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        "RGName": "Ignitebackup-4",
+        "VMName": "eastus2-DBVM",
+        "Backup_RGName": "Ignitebackup-4",
+        "VaultName": "east2vault-01-4by4qtontyt5g",
+        "Policy": "SOX"
+      }
+
+    ]
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Resources/deployments",
+      "name": "[concat('Protect-',variables('ProtectArray')[copyIndex()].VMName)]",
+      "apiVersion": "2017-05-10",
+      "copy": {
+        "name": "ProtectVM-Copy",
+        "count": "[length(variables('ProtectArray'))]"
+      },
+      "subscriptionId": "[variables('ProtectArray')[copyIndex()].SubID]",
+      "resourceGroup": "[variables('ProtectArray')[copyIndex()].RGName]",
+      "properties": {
+        "mode": "Incremental",
+        "template": {
+          "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+          "contentVersion": "1.0.0.0",
+          "resources": [
+            {
+              "type": "Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems",
+              "name": "[concat(variables('ProtectArray')[copyIndex()].VaultName, '/Azure/iaasvmcontainer;iaasvmcontainerv2;',variables('ProtectArray')[copyIndex()].RGName,';',variables('ProtectArray')[copyIndex()].VMName, '/vm;iaasvmcontainerv2;', variables('ProtectArray')[copyIndex()].RGName,variables('ProtectArray')[copyIndex()].VMName)]",
+              "apiVersion": "2016-06-01",
+              "properties": {
+                "protectedItemType": "Microsoft.ClassicCompute/virtualMachines",
+                "policyId": "[resourceId('Microsoft.RecoveryServices/vaults/backupPolicies', variables('ProtectArray')[copyIndex()].VaultName, variables('ProtectArray')[copyIndex()].Policy)]",
+                "sourceResourceId": "[concat('/subscriptions/',variables('ProtectArray')[copyIndex()].SubID,'/resourceGroups/',variables('ProtectArray')[copyIndex()].RGName,'/providers/Microsoft.Compute/virtualMachines/',variables('ProtectArray')[copyIndex()].VMName)]"
+              }
+            }
+          ]
+        }
+      },
+      "dependsOn": [
+
+      ]
+    }
+  ],
+  "outputs": {
+
+  }
+}
